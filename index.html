@@ -5,175 +5,6 @@
   <head>
     <meta charset="utf-8" />
     <style>
-      .menu {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 10px !important;
-    width: 100% !important;
-    margin: 0 0 30px 0 !important;
-}
-
-/* Main menu items */
-.menu > .item,
-.menu > .submenu-toggle {
-    display: block !important;
-    width: 100% !important;
-    min-height: 52px !important;
-
-    padding: 14px 20px !important;
-
-    background: #ffffff !important;
-    color: #222222 !important;
-
-    border: 1px solid #d8d8d8 !important;
-    border-radius: 8px !important;
-
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 18px !important;
-    font-weight: normal !important;
-    line-height: 24px !important;
-
-    text-decoration: none !important;
-    text-align: left !important;
-
-    cursor: pointer !important;
-
-    margin: 0 !important;
-}
-
-/* Hover */
-.menu > .item:hover,
-.menu > .submenu-toggle:hover {
-    background: #f0f3f7 !important;
-    color: #111111 !important;
-}
-
-/* =========================
-   DROPDOWN BUTTON
-   ========================= */
-
-.submenu-toggle {
-    position: relative !important;
-    text-align: left !important;
-}
-
-/* Arrow */
-.submenu-toggle::after {
-    content: "›" !important;
-
-    position: absolute !important;
-    right: 20px !important;
-    top: 50% !important;
-
-    transform: translateY(-50%) !important;
-
-    font-size: 26px !important;
-    line-height: 1 !important;
-
-    transition: transform 0.2s ease !important;
-}
-
-/* Rotated arrow when open */
-.submenu-toggle.active::after {
-    transform: translateY(-50%) rotate(90deg) !important;
-}
-
-/* =========================
-   SUBMENU
-   ========================= */
-
-.submenu {
-    display: none !important;
-
-    flex-direction: column !important;
-
-    width: calc(100% - 25px) !important;
-
-    margin: -3px 0 0 25px !important;
-    padding: 0 !important;
-
-    gap: 5px !important;
-}
-
-/* Open submenu */
-.submenu.open {
-    display: flex !important;
-}
-
-/* Submenu links */
-.submenu a {
-    display: block !important;
-
-    width: 100% !important;
-
-    padding: 11px 16px !important;
-
-    background: #fafafa !important;
-    color: #333333 !important;
-
-    border: 1px solid #e1e1e1 !important;
-    border-radius: 6px !important;
-
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 16px !important;
-    line-height: 22px !important;
-
-    text-decoration: none !important;
-
-    margin: 0 !important;
-}
-
-/* Submenu hover */
-.submenu a:hover {
-    background: #eef2f7 !important;
-    color: #111111 !important;
-}
-
-/* Number */
-.submenu .number {
-    display: inline-block !important;
-    min-width: 35px !important;
-    font-weight: bold !important;
-}
-
-/* =========================
-   REMOVE OLD WEEBLY STYLES
-   ========================= */
-
-.menu a::before,
-.menu a::after {
-    content: none !important;
-}
-
-.menu button {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    box-shadow: none !important;
-}
-
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 600px) {
-
-    .menu > .item,
-    .menu > .submenu-toggle {
-        font-size: 16px !important;
-        padding: 13px 16px !important;
-    }
-
-    .submenu {
-        width: calc(100% - 15px) !important;
-        margin-left: 15px !important;
-    }
-
-    .submenu a {
-        font-size: 15px !important;
-        padding: 10px 14px !important;
-    }
-}
-
 
       * {
         caret-color: transparent;
@@ -2904,118 +2735,77 @@
 
                                                                           <h1>Nastavni materijali</h1>
 
-<div class="menu">
+<ul class="menu">
 
-    <!-- Programiranje 2 -->
-    <button class="submenu-toggle" onclick="toggleMenu(this, 'programiranje')">
-        Programiranje 2
-    </button>
+    <!-- TOP LEVEL LINKS FIRST -->
 
-    <div class="submenu" id="programiranje">
-        <a href="pro1.html">
-            <span class="number">1.</span> Programiranje 2
+    <li>
+        <a href="./gdrive.html">
+            Google Drive
         </a>
+    </li>
 
-        <a href="pro2.html">
-            <span class="number">2.</span> Programiranje 2
+    <li>
+        <a href="./ssa.html">
+            SSA
         </a>
+    </li>
 
-        <a href="pro3.html">
-            <span class="number">3.</span> Programiranje 2
+    <li>
+        <a href="./kontakt.html">
+            Kontakt
         </a>
-
-        <a href="pro4.html">
-            <span class="number">4.</span> Programiranje 2
-        </a>
-
-        <a href="pro5.html">
-            <span class="number">5.</span> Programiranje 2
-        </a>
-
-        <a href="pro6.html">
-            <span class="number">6.</span> Programiranje 2
-        </a>
-
-        <a href="pro7.html">
-            <span class="number">7.</span> Programiranje 2
-        </a>
-
-        <a href="pro8.html">
-            <span class="number">8.</span> Programiranje 2
-        </a>
-
-        <a href="pro9.html">
-            <span class="number">9.</span> Programiranje 2
-        </a>
-    </div>
+    </li>
 
 
-    <!-- Mobilno programiranje -->
-    <button class="submenu-toggle" onclick="toggleMenu(this, 'mobilno')">
-        Mobilno programiranje
-    </button>
+    <!-- PROGRAMIRANJE 2 -->
 
-    <div class="submenu" id="mobilno">
-        <a href="mob1.html">
-            <span class="number">1.</span> Mobilno programiranje
-        </a>
+    <li>
 
-        <a href="mob2.html">
-            <span class="number">2.</span> Mobilno programiranje
-        </a>
+        <div class="title">
+            Programiranje 2
+        </div>
 
-        <a href="mob3.html">
-            <span class="number">3.</span> Mobilno programiranje
-        </a>
+        <ul class="children">
+            <li><a href="./pro1.html"><span class="number">1.</span> Programiranje 2</a></li>
+            <li><a href="./pro2.html"><span class="number">2.</span> Programiranje 2</a></li>
+            <li><a href="./pro3.html"><span class="number">3.</span> Programiranje 2</a></li>
+            <li><a href="./pro4.html"><span class="number">4.</span> Programiranje 2</a></li>
+            <li><a href="./pro5.html"><span class="number">5.</span> Programiranje 2</a></li>
+            <li><a href="./pro6.html"><span class="number">6.</span> Programiranje 2</a></li>
+            <li><a href="./pro7.html"><span class="number">7.</span> Programiranje 2</a></li>
+            <li><a href="./pro8.html"><span class="number">8.</span> Programiranje 2</a></li>
+            <li><a href="./pro9.html"><span class="number">9.</span> Programiranje 2</a></li>
+        </ul>
 
-        <a href="mob4.html">
-            <span class="number">4.</span> Mobilno programiranje
-        </a>
-
-        <a href="mob5.html">
-            <span class="number">5.</span> Mobilno programiranje
-        </a>
-
-        <a href="mob6.html">
-            <span class="number">6.</span> Mobilno programiranje
-        </a>
-
-        <a href="mob7.html">
-            <span class="number">7.</span> Mobilno programiranje
-        </a>
-
-        <a href="mob8.html">
-            <span class="number">8.</span> Mobilno programiranje
-        </a>
-
-        <a href="mob9.html">
-            <span class="number">9.</span> Mobilno programiranje
-        </a>
-
-        <a href="mob10.html">
-            <span class="number">10.</span> Mobilno programiranje
-        </a>
-
-        <a href="mob11.html">
-            <span class="number">11.</span> Mobilno programiranje
-        </a>
-    </div>
+    </li>
 
 
-    <!-- Ostali linkovi -->
-    <a class="item" href="gdrive.html">
-        Google Drive
-    </a>
+    <!-- MOBILNO PROGRAMIRANJE -->
 
-    <a class="item" href="ssa.html">
-        SSA
-    </a>
+    <li>
 
-    <a class="item" href="kontakt.html">
-        Kontakt
-    </a>
+        <div class="title">
+            Mobilno programiranje
+        </div>
 
-</div>
+        <ul class="children">
+            <li><a href="./mob1.html"><span class="number">1.</span> Mobilno programiranje</a></li>
+            <li><a href="./mob2.html"><span class="number">2.</span> Mobilno programiranje</a></li>
+            <li><a href="./mob3.html"><span class="number">3.</span> Mobilno programiranje</a></li>
+            <li><a href="./mob4.html"><span class="number">4.</span> Mobilno programiranje</a></li>
+            <li><a href="./mob5.html"><span class="number">5.</span> Mobilno programiranje</a></li>
+            <li><a href="./mob6.html"><span class="number">6.</span> Mobilno programiranje</a></li>
+            <li><a href="./mob7.html"><span class="number">7.</span> Mobilno programiranje</a></li>
+            <li><a href="./mob8.html"><span class="number">8.</span> Mobilno programiranje</a></li>
+            <li><a href="./mob9.html"><span class="number">9.</span> Mobilno programiranje</a></li>
+            <li><a href="./mob10.html"><span class="number">10.</span> Mobilno programiranje</a></li>
+            <li><a href="./mob11.html"><span class="number">11.</span> Mobilno programiranje</a></li>
+        </ul>
+
+    </li>
+
+</ul>
                                                                             <div
                                                                               class="element-box-contents"
                                                                             >
